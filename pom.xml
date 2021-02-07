@@ -41,20 +41,12 @@
             <version>2.1.2</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>io.cucumber</groupId>
-            <artifactId>cucumber-java</artifactId>
-            <version>5.5.0</version>
-            <scope>compile</scope>
-        </dependency>
-
 
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>4.3.1</version>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -79,37 +71,15 @@
                 <configuration>
                     <parallel>methods</parallel>
                     <threadCount>${threads}</threadCount>
-
                     <systemPropertyVariables>
                         <browser>${browser}</browser>
                     </systemPropertyVariables>
                 </configuration>
                 <executions>
-
                     <execution>
-
                         <goals>
                             <goal>integration-test</goal>
                             <goal>verify</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <plugin>
-                <groupId>com.lazerycode.selenium</groupId>
-                <artifactId>driver-binary-downloader-maven-plugin</artifactId>
-                <version>1.0.18</version>
-                <configuration>
-                    <!-- root directory that downloaded driver binaries will be stored in -->
-                    <rootStandaloneServerDirectory>src/main/resources/binaries</rootStandaloneServerDirectory>
-                    <!-- Where you want to store downloaded zip files -->
-                    <downloadedZipFileDirectory>src/main/resources/zips</downloadedZipFileDirectory>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>selenium</goal>
                         </goals>
                     </execution>
                 </executions>
