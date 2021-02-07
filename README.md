@@ -1,5 +1,4 @@
-# Simple Java test automation
-
+# Simple Java test automation Framework
 
 
 ## Tools
@@ -13,11 +12,11 @@ close the repo
 change into repo directory
 open terminal
 for chrome: 
-    mvn clean verify -Dbrowser=chrome
+   - mvn clean verify -Dbrowser=chrome
 for Firefox:
-    mvn clean verify -Dbrowser=firefox
+   - mvn clean verify -Dbrowser=firefox
 for Edge:
-    mvn clean verify -Dbrowser=edge
+   - mvn clean verify -Dbrowser=edge
 for Opera:
 mvn clean verify -Dbrowser=opera
 
