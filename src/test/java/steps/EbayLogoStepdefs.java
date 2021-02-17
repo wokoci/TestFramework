@@ -10,7 +10,7 @@ import static junit.framework.TestCase.fail;
 
 public class EbayLogoStepdefs {
 
-    private WebDriver driver;
+    private final WebDriver driver;
 
     public EbayLogoStepdefs(Common_steps Common_steps) {
         this.driver = Common_steps.getDriver();

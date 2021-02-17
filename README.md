@@ -18,7 +18,7 @@ for Firefox:
 for Edge:
    - mvn clean verify -Dbrowser=edge
 for Opera:
-mvn clean verify -Dbrowser=opera
+   - mvn clean verify -Dbrowser=opera
 
 todo:
 add appium
