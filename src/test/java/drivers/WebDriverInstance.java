@@ -10,45 +10,46 @@ public class WebDriverInstance {
     private WebDriverInstance() {
     }
 
-    private static ThreadLocal<WebDriver> threadedDrvier = new ThreadLocal<>();
+    private static final ThreadLocal<WebDriver> threadedDriver = new ThreadLocal<>();
 
     public WebDriver getDriver(String browser) {
         WebDriver driver = null;
         try {
             if (browser.equalsIgnoreCase("firefox")) {
                 driver = DriverFactory.getDriver(DriverType.FIREFOX);
-                threadedDrvier.set(driver);
+                threadedDriver.set(driver);
             }
 
             if (browser.equalsIgnoreCase("chrome")) {
                 driver = DriverFactory.getDriver(DriverType.CHROME);
-                threadedDrvier.set(driver);
+                threadedDriver.set(driver);
             }
             if (browser.equalsIgnoreCase("edge")) {
                 driver = DriverFactory.getDriver(DriverType.EDGE);
-                threadedDrvier.set(driver);
+                threadedDriver.set(driver);
             }
-
             if (browser.equalsIgnoreCase("safari")) {
                 driver = DriverFactory.getDriver(DriverType.SAFARI);
-                threadedDrvier.set(driver);
+                threadedDriver.set(driver);
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-        threadedDrvier.get().manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
-        threadedDrvier.get().manage().window().maximize();
+        threadedDriver.get().manage().timeouts().implicitlyWait(4, TimeUnit.SECONDS);
+        threadedDriver.get().manage().window().maximize();
 
-        return threadedDrvier.get();
+        return threadedDriver.get();
     }
 
     public static WebDriverInstance getInstance() {
         return instance;
     }
 
+
     public void quiteDriver() {
-        threadedDrvier.get().quit();
-        threadedDrvier.set(null);
+        threadedDriver.get().quit();
+        threadedDriver.set(null);
     }
+
+
 }
