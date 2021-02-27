@@ -86,17 +86,17 @@ public class EbayHomePageSteps {
 
     @When("I perform advanced search")
     public void i_perform_advanced_search(DataTable dataTable) throws InterruptedException {
-       //taken as keywordSearchInput
+        //taken as keywordSearchInput
         driver.findElement(By.xpath("//input[@id='_nkw']")).sendKeys(dataTable.cell(1, 0));
         // taken as excludeSearchInputBox
         driver.findElement(By.xpath("//input[@id='_ex_kw']")).sendKeys(dataTable.cell(1, 1));
         // taken as minPriceInputBox
         driver.findElement(By.xpath("//input[@name='_udlo']")).sendKeys(dataTable.cell(1, 2));
-         // maxPriceInputBox
+        // maxPriceInputBox
         driver.findElement(By.xpath("//input[@name='_udhi']")).sendKeys(dataTable.cell(1, 3));
 
         Thread.sleep(500);
-    // taken as search advanceSearchBtn
+        // taken as search advanceSearchBtn
         driver.findElement(By.xpath("//button[@id='searchBtnLowerLnk']")).click();
         Thread.sleep(500);
 
@@ -107,8 +107,7 @@ public class EbayHomePageSteps {
         Thread.sleep(2000);
         String stringCountValue = driver.findElement(By.xpath("//span[@class='rcnt']")).getText().trim();
         int intResultValue = Integer.parseInt(stringCountValue.replace(",", ""));
-        System.out.println(intResultValue + "  Results count found");
-        if (intResultValue > int1) {
+        if (int1 > intResultValue) {
             fail("There are less than " + int1 + " items returned");
         }
     }

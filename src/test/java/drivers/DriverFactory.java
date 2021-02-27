@@ -39,7 +39,7 @@ public class DriverFactory {
         driverMap.put(DriverType.EDGE, edgeDriverSupplier);
     }
 
-    public static final WebDriver getDriver(DriverType type) {
+    public static WebDriver getDriver(DriverType type) {
         return driverMap.get(type).get();
     }
 }

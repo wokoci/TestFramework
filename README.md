@@ -6,6 +6,7 @@
 2. Cucumber 
 3. Selenium 
 4. Maven
+5. Java 8
 
 ## Execution
 close the repo

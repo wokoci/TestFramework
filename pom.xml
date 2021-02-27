@@ -12,7 +12,6 @@
         <selenium.version>3.141.59</selenium.version>
         <webdrivermanager.version>4.3.1</webdrivermanager.version>
         <assertj.core.version>3.11.1</assertj.core.version>
-<!--        <testng.version>7.1.0</testng.version>-->
         <browser>firefox</browser>
         <threads>1</threads>
     </properties>
