@@ -6,6 +6,7 @@ Feature: Ebay Home Page Scenarios
     When I click on advanced link
     Then I am navigated to the advanced page
 
+
   Scenario: Search for Iphone returns
     Given I am on the ebay home page
     When I search for 'iphone 11'
@@ -32,13 +33,12 @@ Feature: Ebay Home Page Scenarios
       | Mac laptop | desktop | 700 | 900 |
     Then I can verify there are more than 3 results from advanced search
 
-  @P500
   Scenario Outline: Ebay home page links
     Given I am on the ebay home page
     When I click on '<link>'
     Then I can validate '<url>' and '<title>' are displayed
     Examples:
-      | link        | url                                                | title        |
-      | Electronics | https://www.ebay.co.uk/b/Electronics/bn_7000259660 | Electronics  |
-      | Fashion     | https://www.ebay.co.uk/b/Fashion/bn_7000259675     | Fashion      |
-      | Toys        | https://www.ebay.co.uk/b/Toys-Games/220/bn_1841704 | Toys & Games |
+      | link          | url                                                | title         |
+      | Home & Garden | https://www.ebay.co.uk/b/Home-Garden/bn_7000259670 | Home & Garden |
+      | Fashion       | https://www.ebay.co.uk/b/Fashion/bn_7000259675     | Fashion       |
+      | Toys          | https://www.ebay.co.uk/b/Toys-Games/220/bn_1841704 | Toys & Games  |

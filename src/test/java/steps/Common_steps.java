@@ -1,7 +1,5 @@
 package steps;
 
-import drivers.DriverFactory;
-import drivers.DriverType;
 import drivers.WebDriverInstance;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
@@ -15,16 +13,15 @@ public class Common_steps {
     public void setUp() {
         String browserName = System.getProperty("browser");
         System.out.println(browserName + " :browser name");
-        if (browserName==null){
-            browserName="firefox";
+        if (browserName == null) {
+            browserName = "firefox";
         }
-
         driver = WebDriverInstance.getInstance().getDriver(browserName);
     }
 
     @After
     public void tearDown() throws InterruptedException {
-       WebDriverInstance.getInstance().quiteDriver();
+        WebDriverInstance.getInstance().quiteDriver();
     }
 
     public WebDriver getDriver() {

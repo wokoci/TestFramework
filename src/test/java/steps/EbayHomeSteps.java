@@ -1,5 +1,6 @@
 package steps;
 
+import com.testframework.pages.EbayHomePage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,12 +9,14 @@ import org.openqa.selenium.WebDriver;
 
 import static junit.framework.TestCase.fail;
 
-public class EbayLogoStepdefs {
+public class EbayHomeSteps {
 
     private final WebDriver driver;
+    EbayHomePage ebayHomePage;
 
-    public EbayLogoStepdefs(Common_steps Common_steps) {
+    public EbayHomeSteps(Common_steps Common_steps) {
         this.driver = Common_steps.getDriver();
+        ebayHomePage = new EbayHomePage(driver);
     }
 
     @Given("I am on the ebay electronics page")
@@ -22,15 +25,14 @@ public class EbayLogoStepdefs {
     }
 
     @When("I click on the ebay logo")
-    public void iClickOnTheEbayLogo() throws InterruptedException {
-        Thread.sleep(1000);
-        driver.findElement(By.id("gh-la")).click();
+    public void iClickOnTheEbayLogo() {
+        ebayHomePage.clickOnLogo();
     }
 
     @Then("I am navigated to the home page")
     public void iAmNavigatedToTheHomePage() {
         String expectedUrl = "https://www.ebay.co.uk/";
-        String actualUrl = driver.getCurrentUrl();
+        String actualUrl = ebayHomePage.getCurrentUrl();
         if (!actualUrl.equals(expectedUrl)) {
             fail("The page was not navigated to home page on logo click");
         }
