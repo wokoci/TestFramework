@@ -22,6 +22,10 @@ open terminal
 - for Opera:
    - mvn clean verify -Dbrowser=opera
 
+Note:
+You will need the specified browsers installed to execute tests against 
+selected browser
+
 todo:
 Add Jenkins for local CI
 add sample automated testing using Axe
