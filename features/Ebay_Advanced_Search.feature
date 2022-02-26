@@ -39,6 +39,6 @@ Feature: Ebay Home Page Scenarios
     Then I can validate '<url>' and '<title>' are displayed
     Examples:
       | link          | url                                                | title         |
-      | Home & Garden | https://www.ebay.co.uk/b/Home-Garden/bn_7000259670 | Home & Garden |
+      | Home & Garden | https://www.ebay.co.uk/b/Home-Garden/bn_7000259670 | Home & garden |
       | Fashion       | https://www.ebay.co.uk/b/Fashion/bn_7000259675     | Fashion       |
       | Toys          | https://www.ebay.co.uk/b/Toys-Games/220/bn_1841704 | Toys & Games  |

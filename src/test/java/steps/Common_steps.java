@@ -14,7 +14,7 @@ public class Common_steps {
         String browserName = System.getProperty("browser");
         System.out.println(browserName + " :browser name");
         if (browserName == null) {
-            browserName = "firefox";
+            browserName = "chrome";
         }
         driver = WebDriverInstance.getInstance().getDriver(browserName);
     }

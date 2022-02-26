@@ -132,7 +132,7 @@ public class EbayAdvancedSearchSteps {
         }
 
         if (!actualTitle.contains(title)) {
-            fail("Title  is not corrected. expected" + title + " but got :  " + actualTitle);
+            fail("Title  is not correcte. expected" + title + " but got :  " + actualTitle);
         }
     }
 
