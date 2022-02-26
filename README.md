@@ -7,6 +7,7 @@
 3. Selenium 
 4. Maven
 5. Java 8
+6. dequelabs / axe-core
 
 ## Execution
 close the repo
@@ -23,4 +24,5 @@ open terminal
 
 todo:
 Add Jenkins for local CI
+add sample automated testing using Axe
 
