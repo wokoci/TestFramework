@@ -1,6 +1,6 @@
 Feature: Ebay Home Page Scenarios
 
-
+  @access
   Scenario: Navigate to Advanced search
     Given I am on the ebay home page
     When I click on advanced link
