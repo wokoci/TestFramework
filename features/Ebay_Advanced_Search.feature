@@ -19,6 +19,7 @@ Feature: Ebay Home Page Scenarios
     Then I can verify there are more than 2000 results displayed
 
 
+
   Scenario: search for soap in Baby Category returns results
     Given I am on the ebay home page
     When I search for 'soap' in 'baby category'
