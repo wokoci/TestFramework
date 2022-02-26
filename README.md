@@ -12,15 +12,15 @@
 close the repo
 change into repo directory
 open terminal
-for chrome: 
+- for chrome: 
    - mvn clean verify -Dbrowser=chrome
-for Firefox:
+- for Firefox:
    - mvn clean verify -Dbrowser=firefox
-for Edge:
+- for Edge:
    - mvn clean verify -Dbrowser=edge
-for Opera:
+- for Opera:
    - mvn clean verify -Dbrowser=opera
 
 todo:
-add appium
+Add Jenkins for local CI
 
