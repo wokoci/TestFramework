@@ -158,7 +158,8 @@ formatter.match({
   "location": "steps.EbayAdvancedSearchSteps.i_search_for_in(java.lang.String,java.lang.String)"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "org.openqa.selenium.StaleElementReferenceException: The element reference of \u003coption\u003e is stale; either the element is no longer attached to the DOM, it is not in the current frame context, or the document has been refreshed\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027FVFXM15VHV2F\u0027, ip: \u0027fe80:0:0:0:1812:8001:e2b3:1160%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.16\u0027, java.version: \u002711.0.9\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 97.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20220216172458, moz:geckodriverVersion: 0.30.0, moz:headless: false, moz:processID: 7779, moz:profile: /var/folders/2k/wshrv09d3gg..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: MAC, platformName: MAC, platformVersion: 20.6.0, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: 632f41e1-5341-443d-b5c5-9583e8e198bc\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\n\tat org.openqa.selenium.remote.RemoteWebElement.getText(RemoteWebElement.java:166)\n\tat steps.EbayAdvancedSearchSteps.i_search_for_in(EbayAdvancedSearchSteps.java:77)\n\tat ✽.I search for \u0027soap\u0027 in \u0027baby category\u0027(file:///Users/jeffreyw/projects/side%20project/forEOYR/TestFramework/features/Ebay_Advanced_Search.feature:25)\n",
+  "status": "failed"
 });
 formatter.step({
   "name": "I can verify there are more than 2000 results displayed",
@@ -168,7 +169,7 @@ formatter.match({
   "location": "steps.EbayAdvancedSearchSteps.i_can_verify_there_are_more_than_results_displayed(java.lang.Integer)"
 });
 formatter.result({
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.after({
   "status": "passed"
