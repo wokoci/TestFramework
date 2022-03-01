@@ -11,8 +11,8 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:Report"},
         strict = true,
         // dryRun = true,
-        monochrome = true
-         //  tags = {"@access"}
+        monochrome = true,
+           tags = {"@access"}
         // name = {"Advanced"}
 )
 public class TestRunner {
